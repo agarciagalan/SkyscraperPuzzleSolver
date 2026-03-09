@@ -573,14 +573,14 @@ In the second case, it returns 1 and does not print anything on the screen. It i
 1. The function receives the board with original values derived from the strongest hints. [<sup>1</sup>](#tabla-1)
 2. The algorithm attempts to place the minimum valid value **(1)** at the first available cell, **(0, 0)**. [<sup>2</sup>](#tabla-1)
 3. Since **1** satisfies the row/column uniqueness and is consistent with the Top and Left hints, the recursion moves to the next cell. Adds **1** at the next available cell, **(0, 1)**. [<sup>3</sup>](#tabla-1)
-4. At **(0, 1)**, placing **1** creates a duplicate in the row. The algorithm triggers a Backtrack: it resets the cell to **-1**, increments the test value, and tries **2** at position **(0, 1)**. [<sup>4</sup>](#tabla-4)
-5. Although **2** is unique at **(0, 1)**, the "Left" hint **(e.g., 2)** is evaluated. The sequence 1, 2, 4 already shows **3** skyscrapers in [table 4](#tabla-4), the branch is discarded immediately **(prune)**.[<sup>5</sup>](#tabla-4)
-6. Following the same logic, 1, 3, 4 shows **3** skyscrapers in [table 5](#tabla-4) when hint is **2**. The value is reset to **-1** and updated to **4** at **(0, 1)**. [<sup>6</sup>](#tabla-4)
-7. It has tested **1 to 4** at position **(0, 1)** and none was valid, so it propagates back to position **(0, 0)**, replace value with **-1** and increments it to **2**, so now test **2** at position **(0, 0)**. [<sup>7</sup>](#tabla-7)
-8. Value of **2** is valid at position **0** so passes to the next, adding **1** at position **(0, 1)**. [<sup>8</sup>](#tabla-7)
-9. Upon reaching **(0, 2)**, the algorithm detects a pre-set value. It skips this position automatically, preserving the modification of the anchor, and jumps to the next available cell, adding **1** to position **(0, 3)**. [<sup>9</sup>](#tabla-7)
-10. Value at **(0, 3)** is repeated so it tests **2** at this position. [<sup>10</sup>](#tabla-10)
-11. Same as last step value of **2** is repeated so it changes to value **3** at position **(0, 3)**. [<sup>11</sup>](#tabla-10)
+4. At **(0, 1)**, placing **1** creates a duplicate in the row. The algorithm triggers a Backtrack: it resets the cell to **-1**, increments the test value, and tries **2** at position **(0, 1)**. [<sup>4</sup>](#tabla-2)
+5. Although **2** is unique at **(0, 1)**, the "Left" hint **(e.g., 2)** is evaluated. The sequence 1, 2, 4 already shows **3** skyscrapers in [table 4](#tabla-2), the branch is discarded immediately **(prune)**.[<sup>5</sup>](#tabla-2)
+6. Following the same logic, 1, 3, 4 shows **3** skyscrapers in [table 5](#tabla-2) when hint is **2**. The value is reset to **-1** and updated to **4** at **(0, 1)**. [<sup>6</sup>](#tabla-2)
+7. It has tested **1 to 4** at position **(0, 1)** and none was valid, so it propagates back to position **(0, 0)**, replace value with **-1** and increments it to **2**, so now test **2** at position **(0, 0)**. [<sup>7</sup>](#tabla-3)
+8. Value of **2** is valid at position **0** so passes to the next, adding **1** at position **(0, 1)**. [<sup>8</sup>](#tabla-3)
+9. Upon reaching **(0, 2)**, the algorithm detects a pre-set value. It skips this position automatically, preserving the modification of the anchor, and jumps to the next available cell, adding **1** to position **(0, 3)**. [<sup>9</sup>](#tabla-3)
+10. Value at **(0, 3)** is repeated so it tests **2** at this position. [<sup>10</sup>](#tabla-4)
+11. Same as last step value of **2** is repeated so it changes to value **3** at position **(0, 3)**. [<sup>11</sup>](#tabla-4)
 
 It follows the same steps over and over again till one of the [previous cases](#ending-the-process) are matched.
 
