@@ -30,19 +30,6 @@ void	print_board(int *matrix, int size)
 	}
 }
 
-int	*create_board(int *board, int size)
-{
-	int		index;
-
-	index = 0;
-	while (index < (size * size))
-	{
-		board[index] = -1;
-		index++;
-	}
-	return (board);
-}
-
 void	set_value_high(int *matrix, int orientation, int index, int size)
 {
 	if (orientation == 0)
@@ -93,4 +80,17 @@ void	set_initial_values(int *matrix, int *combination, int size)
 		}
 		orientation++;
 	}
+}
+int	*create_board(int *board, int *combination, int size)
+{
+	int		index;
+
+	index = 0;
+	while (index < (size * size))
+	{
+		board[index] = -1;
+		index++;
+	}
+	set_initial_values(board, combination, size);
+	return (board);
 }
