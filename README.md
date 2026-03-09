@@ -117,11 +117,12 @@ In the second case, it returns 1 and does not print anything on the screen. It i
 
 #### Following the last example:
 
-<table border="0">
+#### <span id="tabla-1">Step 1 to 3</span>
+<table>
   <tr>
     <td>
       <table>
-        <caption id="tabla-1">1</caption>
+        <caption>1</caption>
         <tr>
 			<td></td><td>3</td><td>2</td><td>1</td><td>2</td><td></td>
 		</tr>
@@ -190,11 +191,13 @@ In the second case, it returns 1 and does not print anything on the screen. It i
     </td>
   </tr>
 </table>
-<table border="0">
+
+#### <span id="tabla-2">Step 4 to 6</span>
+<table>
   <tr>
     <td>
       <table>
-        <caption id="tabla-4">4</caption>
+        <caption>4</caption>
         <tr>
 			<td></td><td>3</td><td>2</td><td>1</td><td>2</td><td></td>
 		</tr>
@@ -263,7 +266,9 @@ In the second case, it returns 1 and does not print anything on the screen. It i
     </td>
   </tr>
 </table>
-<table border="0">
+
+#### <span id="tabla-3">Step 7 to 9</span>
+<table>
   <tr>
     <td>
       <table>
@@ -336,7 +341,9 @@ In the second case, it returns 1 and does not print anything on the screen. It i
     </td>
   </tr>
 </table>
-<table border="0">
+
+#### <span id="tabla-4">Step 10 to 12</span>
+<table>
   <tr>
     <td>
       <table>
@@ -409,7 +416,9 @@ In the second case, it returns 1 and does not print anything on the screen. It i
     </td>
   </tr>
 </table>
-<table border="0">
+
+#### <span id="tabla-5">Step 13 to 15</span>
+<table>
   <tr>
     <td>
       <table>
@@ -483,7 +492,9 @@ In the second case, it returns 1 and does not print anything on the screen. It i
   </tr>
 </table>
 <br><b><p> . . . </p></b><br>
-<table border="0">
+
+#### <span id="tabla-6">Step 16 to 18</span>
+<table>
   <tr>
     <td>
       <table>
@@ -584,6 +595,10 @@ There are two different ways to check hints, proactive and reactive.
 The real reason for using malloc in this code is to be as scalable as possible, so that you can create boards as large as your computer allows.
 However, there is a technical problem that can cause a bottleneck, as it follows a recursive resolution, so when you increase the size, the number of stacked iterations also increases, which could be a problem with large numbers. It could even use up all available memory and cause an exception. Keep in mind that the resolution time increases exponentially.
 This could be a great opportunity to improve the code if desired, but it is functional in its current state.
+
+## How to clone
+
+
 
 ## What is a rush?
 
