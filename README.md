@@ -30,7 +30,7 @@ Once the clues are obtained and the total number is verified to be correct (side
 
 Finally, the solving process begins, which is the last step and will determine whether the clues provided produce a solvable puzzle or not.
 
-Example of solvable puzzles:
+### Example of solvable puzzles:
 * 4x4: "3 2 1 2 2 2 3 1 2 2 1 3 2 2 3 1"
 * 5x5: "3 2 1 2 2 1 2 3 4 2 3 2 2 3 1 2 2 3 1 4"
 * 6x6: "2 1 4 2 3 3 2 4 2 2 1 3 2 3 3 3 1 4 3 2 1 2 3 2"
@@ -596,9 +596,42 @@ The real reason for using malloc in this code is to be as scalable as possible, 
 However, there is a technical problem that can cause a bottleneck, as it follows a recursive resolution, so when you increase the size, the number of stacked iterations also increases, which could be a problem with large numbers. It could even use up all available memory and cause an exception. Keep in mind that the resolution time increases exponentially.
 This could be a great opportunity to improve the code if desired, but it is functional in its current state.
 
-## How to clone
+## How to get your copy?
 
+1. Clone the repository
+   
+First, clone the project using git:
+```bash
+	git clone https://github.com/agarciagalan/ResolutorRascacielos.git
+	cd ResolutorRascacielos
+```
+<br>
 
+2. Compilation
+
+To compile the project using the standard 42 flags (-Wall -Wextra -Werror), run:
+```bash
+	cc -Wall -Werror -Wextra *.c -o rush01
+```
+
+**Tip**
+
+If you want to debug the program in your console, you can add the -g flag at the end:
+
+_cc -Wall -Werror -Wextra *.c -o rush01 -g_
+
+<br>
+
+3. Execution
+
+The program receives a single string containing the clues for the puzzle. The number of clues must be size * 4 (e.g., 16 clues for a 4x4 board).
+
+Examples can be found [here](#example-of-solvable-puzzles). <br>
+The execution should be like shown:
+```bash
+	./rush01 "3 2 1 2 2 2 3 1 2 2 1 3 2 2 3 1"
+```
+<br>
 
 ## What is a rush?
 
